@@ -1,0 +1,133 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const resources = {
+  en: {
+    translation: {
+      // Nav
+      home: 'Home',
+      login: 'Login',
+      signup: 'Sign Up',
+      logout: 'Logout',
+      dashboard: 'Dashboard',
+      // Patient
+      bookAppointment: 'Book Appointment',
+      prescriptions: 'Prescriptions',
+      medicalHistory: 'Medical History',
+      symptomChecker: 'Symptom Checker',
+      // Common
+      search: 'Search',
+      loading: 'Loading…',
+      save: 'Save',
+      cancel: 'Cancel',
+      confirm: 'Confirm',
+      // Appointment
+      date: 'Date',
+      time: 'Time',
+      status: 'Status',
+      notes: 'Notes',
+      doctor: 'Doctor',
+      patient: 'Patient',
+      // Status
+      pending: 'Pending',
+      confirmed: 'Confirmed',
+      completed: 'Completed',
+      cancelled: 'Cancelled',
+    },
+  },
+  hi: {
+    translation: {
+      home: 'होम',
+      login: 'लॉगिन',
+      signup: 'साइन अप',
+      logout: 'लॉगआउट',
+      dashboard: 'डैशबोर्ड',
+      bookAppointment: 'अपॉइंटमेंट बुक करें',
+      prescriptions: 'प्रिस्क्रिप्शन',
+      medicalHistory: 'चिकित्सा इतिहास',
+      symptomChecker: 'लक्षण जांचक',
+      search: 'खोज',
+      loading: 'लोड हो रहा है…',
+      save: 'सहेजें',
+      cancel: 'रद्द करें',
+      confirm: 'पुष्टि करें',
+      date: 'तारीख',
+      time: 'समय',
+      status: 'स्थिति',
+      notes: 'नोट्स',
+      doctor: 'डॉक्टर',
+      patient: 'मरीज़',
+      pending: 'लंबित',
+      confirmed: 'पुष्टि',
+      completed: 'पूर्ण',
+      cancelled: 'रद्द',
+    },
+  },
+  ta: {
+    translation: {
+      home: 'முகப்பு',
+      login: 'உள்நுழை',
+      signup: 'பதிவு செய்',
+      logout: 'வெளியேறு',
+      dashboard: 'டாஷ்போர்டு',
+      bookAppointment: 'சந்திப்பு பதிவு',
+      prescriptions: 'மருந்து சீட்டுகள்',
+      medicalHistory: 'மருத்துவ வரலாறு',
+      symptomChecker: 'அறிகுறி சோதனை',
+      search: 'தேடு',
+      loading: 'ஏற்றுகிறது…',
+      save: 'சேமி',
+      cancel: 'ரத்து செய்',
+      confirm: 'உறுதிப்படுத்து',
+      date: 'தேதி',
+      time: 'நேரம்',
+      status: 'நிலை',
+      notes: 'குறிப்புகள்',
+      doctor: 'மருத்துவர்',
+      patient: 'நோயாளி',
+      pending: 'நிலுவையில்',
+      confirmed: 'உறுதிப்படுத்தப்பட்டது',
+      completed: 'முடிந்தது',
+      cancelled: 'ரத்து',
+    },
+  },
+  te: {
+    translation: {
+      home: 'హోమ్',
+      login: 'లాగిన్',
+      signup: 'సైన్ అప్',
+      logout: 'లాగ్ అవుట్',
+      dashboard: 'డాష్‌బోర్డ్',
+      bookAppointment: 'అపాయింట్‌మెంట్ బుక్',
+      prescriptions: 'ప్రిస్క్రిప్షన్లు',
+      medicalHistory: 'వైద్య చరిత్ర',
+      symptomChecker: 'లక్షణ పరీక్ష',
+      search: 'శోధించు',
+      loading: 'లోడ్ అవుతోంది…',
+      save: 'సేవ్',
+      cancel: 'రద్దు',
+      confirm: 'నిర్ధారించు',
+      date: 'తేదీ',
+      time: 'సమయం',
+      status: 'స్థితి',
+      notes: 'గమనికలు',
+      doctor: 'వైద్యుడు',
+      patient: 'రోగి',
+      pending: 'పెండింగ్',
+      confirmed: 'నిర్ధారించబడింది',
+      completed: 'పూర్తయింది',
+      cancelled: 'రద్దు',
+    },
+  },
+};
+
+i18n
+  .use(initReactI18next)
+  .init({
+    resources,
+    lng: localStorage.getItem('mc_language') || 'en',
+    fallbackLng: 'en',
+    interpolation: { escapeValue: false },
+  });
+
+export default i18n;

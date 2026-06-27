@@ -1,0 +1,10 @@
+// This patch adds DoctorProfilePage to the router.
+// Apply to frontend/src/App.jsx — add these two lines:
+
+// IMPORT (add with other doctor imports):
+// import DoctorProfilePage from './pages/doctor/DoctorProfilePage';
+
+// ROUTE (add after /doctor/patients/:patientId route):
+// <Route path="/doctor/profile" element={
+//   <ProtectedRoute allowedRoles={['doctor']}><DoctorProfilePage /></ProtectedRoute>
+// } />
